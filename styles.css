@@ -47,11 +47,17 @@ section, header, footer {
 }
 
 @media (max-width: 639px) {
-  section, header, footer,
+  section, header, footer {
+    padding: 20px !important;
+    margin: 10px !important;
+  }
+}
+
+@media (max-width: 639px) {
   .left-column, .right-column,
   .resume-container .left-column, .resume-container .right-column {
-    padding: 20px;
-    margin: 10px !important;
+    padding: 0px !important;
+    margin: 0px !important;
   }
 }
 
