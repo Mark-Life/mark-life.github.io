@@ -61,7 +61,7 @@ section, header, footer {
 }
 
 @media (max-width: 639px) {
-  .resume-container section, .resume-container section {
+  .resume-container section, .resume-container header, .resume-container footer {
     padding: 10px !important;
     margin: 0px !important;
   }
