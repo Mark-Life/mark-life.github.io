@@ -48,15 +48,21 @@ section, header, footer {
 
 @media (max-width: 639px) {
   section, header, footer {
+    padding: 10px !important;
+    margin: 10px !important;
+  }
+}
+
+@media (max-width: 639px) {
+  .resume-container .left-column, .resume-container .right-column {
     padding: 0px !important;
     margin: 0px !important;
   }
 }
 
 @media (max-width: 639px) {
-  .left-column, .right-column,
-  .resume-container .left-column, .resume-container .right-column {
-    padding: 0px !important;
+  .resume-container section, .resume-container section {
+    padding: 10px !important;
     margin: 0px !important;
   }
 }
