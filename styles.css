@@ -48,7 +48,8 @@ section, header, footer {
 
 @media (max-width: 639px) {
   section, header, footer,
-  .left-column, .right-column {
+  .left-column, .right-column,
+  .resume-container .left-column, .resume-container .right-column {
     padding: 20px;
     margin: 10px !important;
   }
