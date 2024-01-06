@@ -49,7 +49,7 @@ section, header, footer {
 @media (max-width: 639px) {
   section, header, footer {
     padding: 0px !important;
-    margin: 10px !important;
+    margin: 0px !important;
   }
 }
 
