@@ -16,8 +16,8 @@
           <p>Project Manager & Data Analyst | Nonprofit & Education Specialist</p>
           <p>Making a Difference Through Data</p>
           <br>
-          <button onclick="window.location.href='/'">Home</button>
-          <button onclick="window.open('Andrey_Markin_Resume.pdf', '_blank')">Download Resume</button>
+          <a href="/" class="button">Home</a>
+          <a href="Andrey_Markin_Resume.pdf" target="_blank" class="button">Download Resume</a>
         </header>
                   
         
@@ -85,16 +85,20 @@
       </div>
       
       <div class="right-column">
-        <section id="contacts">
-          <h2>Contacts</h2>
-          <p><a href="mailto:mark.life@pm.me">mark.life@pm.me</a></p>
-          <p><a href="tel:+359878757776">+359 878 757 776</a></p>
-          <p><a href="https://www.linkedin.com/in/mark-life" target="_blank">LinkedIn</a></p>
-          <p><a href="https://github.com/Mark-Life" target="_blank">GitHub</a></p>
-          
-          <!-- <br>
-          <a href="Andrey_Markin.vcf" class="button" download="Andrey_Markin.vcf">Save to Contacts</a> -->
-        </section> 
+        <div id="contacts-placeholder"></div>
+
+        <script>
+          document.addEventListener('DOMContentLoaded', function() {
+            fetch('contacts.html')
+              .then(response => response.text())
+              .then(html => {
+                document.getElementById('contacts-placeholder').innerHTML = html;
+              })
+              .catch(error => {
+                console.error('Error loading contacts:', error);
+              });
+          });
+        </script>
 
         <section id="skills">
           <h2>Skills</h2>
@@ -137,8 +141,8 @@
 
       
         <footer>
-          <button onclick="window.location.href='/'">Home</button>
-          <button onclick="window.open('Andrey_Markin_Resume.pdf', '_blank')">Download Resume</button>
+          <a href="/" class="button">Home</a>
+          <a href="Andrey_Markin_Resume.pdf" target="_blank" class="button">Download Resume</a>
         </footer>
       </div>
     </div>
