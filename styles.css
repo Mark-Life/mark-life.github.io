@@ -105,15 +105,20 @@ a {
 }
 
 /* Styles for buttons */
-.button, button {
+.button, button, a.button {
   display: inline-block;
   background-color: #2079c7;
   color: #fff;
+  font-size: small;
   text-decoration: none;
   padding: 10px 15px;
   border: none;
   cursor: pointer;
   border-radius: 10px;
+  box-sizing: border-box;
+  vertical-align: middle;
+  line-height: 1;
+
 }
 
 .about-container {
@@ -201,4 +206,23 @@ a {
 .resume-container .education-entry p,
 .resume-container .education-entry ul {
   color: #666666;
+}
+
+/* 404 page */
+#not-found-container {
+  max-width: 600px; /* Set a max width for the content */
+  margin: 0 auto; /* Center the container */
+  text-align: center; /* Center text */
+  padding: 50px 20px; /* Add padding */
+}
+
+/* If you want a specific style for h1 on the 404 page */
+#not-found-container h1 {
+  font-size: 2em; /* Larger font size for the 'Oops!' message */
+  margin-bottom: 20px; /* Spacing below the heading */
+}
+
+/* If you want the 'Go Home' link to look like a button as per your site's style */
+#not-found-container .button {
+  /* No additional styles needed if you're happy with the global .button style */
 }
