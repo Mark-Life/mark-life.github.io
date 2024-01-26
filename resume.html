@@ -1,6 +1,7 @@
 <!DOCTYPE html>
   <html lang="en">
   <head>
+    <script src="scripts/cookieConsent.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume - Andrey Markin</title>
@@ -15,11 +16,19 @@
           <h1>Andrey Markin</h1>
           <p>Project Manager & Data Analyst | Nonprofit & Education Specialist</p>
           <p>Making a Difference Through Data</p>
-          <br>
+          <div id="menu-1" class="menu-local" style="margin-top: 20px;">
           <a href="/" class="button">Home</a>
           <a href="Andrey_Markin_Resume.pdf" target="_blank" class="button">Download Resume</a>
+          <a href="#hire" class="button">Hire</a>
+          </div>
+          <div id="resume-menu" class="menu-local" style="margin-top: 10px;">
+            <a href="#contacts" class="local-menu-button">Contacts</a>
+            <a href="#skills" class="local-menu-button">Skills</a>
+            <a href="#certifications" class="local-menu-button">Certifications</a>
+            <a href="#experience" class="local-menu-button">Experience</a>
+            <a href="#education" class="local-menu-button">Education</a>
+          </div>
         </header>
-                  
         
         <section id="experience">
           <h2>Experience</h2>
@@ -71,20 +80,31 @@
           <h2>Education</h2>
           
           <div class="education-entry">
-            <h3>Northeastern University, Boston, USA — English as the Second Language</h3>
+            <h3>Northeastern University, Boston, USA — <span class="different-size">English as the Second Language</span></h3>
             <p>Aug 2018 – Jul 2019</p>
             <p>Principles of Macroeconomics, ESL, Introduction to Philosophy and others</p>
           </div>
           
           <div class="education-entry">
-            <h3>School of Education — Leadership and Management in Education</h3>
+            <h3>School of Education — <span class="different-size">Leadership and Management in Education</span></h3>
             <p>Feb 2021 – Jul 2021</p>
             <p>Professional development program by Ian Craig, Professor at UCL Institute of Education, focusing on the management of organizational changes, establishment of a distributed horizontal leadership structure, evaluation of educational program quality, and implementation of evidence-based approaches in education.</p>
           </div>
         </section>
+        <!-- <section>
+          <div id="menu-2" class="menu-local">
+            <a href="/" class="button">Home</a>
+            <a href="Andrey_Markin_Resume.pdf" target="_blank" class="button">Download Resume</a>
+            <a href="#hire" class="button">Hire</a>
+          </div>
+        </section> -->
       </div>
       
       <div class="right-column">
+        <!-- calendly widget -->
+          <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+          <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+        <!-- end of calendly widget -->
         <div id="contacts-placeholder"></div>
 
         <script>
@@ -139,12 +159,118 @@
           </ul>
         </section>
 
+        <section id="hire" class="form-container">
+          <h2>Hire Andrey</h2>
+          <form>
+            <input type="text" name="name" placeholder="Name">
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="text" name="website" placeholder="Organization Website">
+            <input type="text" name="salary" placeholder="Minimum Salary Suggestion">
+            <input type="text" name="jobTitle" placeholder="Suggested Job Title">
+            <textarea name="jobDescription" placeholder="Job Description" rows="10"></textarea>
+            <button type="submit">Suggest Job</button>
+          </form>
+        </section>
       
-        <footer>
-          <a href="/" class="button">Home</a>
-          <a href="Andrey_Markin_Resume.pdf" target="_blank" class="button">Download Resume</a>
-        </footer>
       </div>
     </div>
+    
+    <style>
+      /* resume */
+        .resume-container ul {
+          padding-left: 20px;
+          color: #666666;
+        }
+
+        .resume-container .job {
+          margin-bottom: 20px;
+        }
+
+        .resume-container .job:last-child {
+          margin-bottom: 0;
+        }
+
+        .resume-container li {
+          margin-bottom: 0;
+        }
+
+        .resume-container h3 {
+          font-style: italic;
+        }
+
+        .resume-container .job h3 .different-size,
+        .resume-container .education-entry h3 .different-size {
+          font-size: 16px;
+        }
+
+        .resume-container .job p,
+        .resume-container .job ul,
+        .resume-container .education-entry p,
+        .resume-container .education-entry ul {
+          color: #666666;
+        }
+        
+        @media (min-width: 1081px) {
+          #resume-menu {
+            display: none !important;
+          }
+        }
+
+        @media (max-width: 639px) {
+          .resume-container, .resume-container .left-column, .resume-container .right-column {
+            padding: 0px !important;
+            margin: 0px !important;
+          }
+        }
+
+        @media (max-width: 639px) {
+          .resume-container section, .resume-container header, .resume-container footer {
+            padding: 20px !important;
+            margin-top: 10px !important;
+            margin-bottom: 10px !important;
+            margin-left: 10px !important;
+            margin-right: 10px !important;
+          }
+        }
+
+      /* form */
+        .form-container {
+          max-width: 500px;
+          justify-content: center;
+          background-color: #fff;
+          border-radius: 8px;
+        }
+
+        form {
+          display: flex;
+          flex-direction: column;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="url"],
+        textarea {
+          font-size: 12px;
+          padding: 10px;
+          margin-bottom: 10px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+        }
+
+        input[type="text"]::placeholder,
+        input[type="email"]::placeholder,
+        input[type="url"]::placeholder,
+        textarea::placeholder {
+          color: #6c757d;
+          opacity: 1;
+        }
+
+        textarea {
+          resize: vertical;
+        }
+
+    </style>
+
+    <script src="scripts/hireFormSubmit.js"></script>
   </body>
 </html>
