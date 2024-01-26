@@ -1,0 +1,46 @@
+<!-- Cookie Consent Banner -->
+<div id="cookieConsentBanner">
+  <p style="margin-bottom: 20px;">We use cookies for Google Analytics to analyze our website traffic. By clicking "Accept", you consent to the use of cookies for these purposes. If you do not consent, click "Deny". You can read more about how we use cookies in our <a href="/technical/privacy.html">Privacy Policy</a>.</p>
+  <button onclick="acceptCookies()">Accept</button>
+  <button onclick="denyCookies()">Deny</button>
+</div>
+
+<!-- End of Cookie Consent Banner -->
+
+<style>
+  #cookieConsentBanner {
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+      font-size: 16px;
+      max-width: 500px;
+      background-color: #e2e7ed;
+      padding: 20px;
+      text-align: center;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  #cookieConsentBanner button {
+    margin-left: 10px;
+    margin-right: 10px;
+
+  }
+
+  @media (max-width: 539px) {
+    #cookieConsentBanner {
+      left: 10px;
+      font-size: 12px;
+      padding: 10px;
+  }
+  }
+
+  @media (prefers-color-scheme: dark) {
+    #cookieConsentBanner {
+        background-color: #1f1f1f;
+        color: #eaeaea;
+    }
+  }
+</style>
+
+
