@@ -6,8 +6,25 @@
   <!-- <p><a href="https://calendly.com/mark-life-108" target="_blank">Calendly – book a meeting</a></p> -->
   <!-- Calendly link widget begin -->
   <!-- <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/mark-life-108'});return false;">Calendly – book a meeting</a> -->
-  <button id="showCalendly" style="margin-top: 10px;">Calendly: book a meeting</button>
+  <!-- <button id="showCalendly" style="margin-top: 10px;">Calendly: book a meeting</button> -->
   <!-- Calendly link widget end -->
+  <!-- Google Calendar Appointment Scheduling begin -->
+   <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
+   <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
+   <script>
+   (function() {
+     var target = document.currentScript;
+     window.addEventListener('load', function() {
+       calendar.schedulingButton.load({
+         url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ3I300YseRwFPWq90ZXjYehXT0jVjs-DQ7pa0ThQC_48ofw9_rkB6PK-j9PKxylpC1R7-0DO5Hr?gv=true',
+         color: '#039BE5',
+         label: 'Book an appointment',
+         target,
+       });
+     });
+   })();
+   </script>
+  <!-- end Google Calendar Appointment Scheduling -->
   <br>
   <!-- <br>
   <a href="Andrey_Markin.vcf" class="button" download="Andrey_Markin.vcf">Save to Contacts</a> -->
